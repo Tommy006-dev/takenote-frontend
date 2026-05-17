@@ -2,7 +2,7 @@ import axios from 'axios';
 
 const axiosClient = axios.create({
     // Đổi port 8000 thành port mà Laravel của bạn đang chạy
-    baseURL: 'http://localhost:8000/api', 
+    baseURL: process.env.REACT_APP_API_URL || 'http://localhost:8000/api', 
     headers: {
         'Content-Type': 'application/json',
         'Accept': 'application/json',
